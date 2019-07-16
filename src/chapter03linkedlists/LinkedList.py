@@ -39,7 +39,7 @@ class LinkedList(object):
         self.head = None
          
     # method to add a node in the linked list
-    def addNode(self, node):
+    def add_node(self, node):
         if self.length == 0:
             self.addBeg(node)
         else:
@@ -47,14 +47,14 @@ class LinkedList(object):
              
          
     # method to add a node at the beginning of the list with a data   
-    def addBeg(self, node):
+    def add_beg(self, node):
         newNode = node
         newNode.next = self.head
         self.head = newNode
         self.length += 1
          
     # method to add a node after the node having the data=data. The data of the new node is value2
-    def addAfterValue(self, data, node):
+    def add_after_value(self, data, node):
         newNode = node
         currentnode = self.head
          
@@ -70,7 +70,7 @@ class LinkedList(object):
         print "The data provided is not present"
                  
     # method to add a node at a particular position
-    def addAtPos(self, pos, node):
+    def add_at_pos(self, pos, node):
         count = 0
         currentnode = self.head
         previousnode = self.head
@@ -93,7 +93,7 @@ class LinkedList(object):
          
                  
     # method to add a node at the end of a list
-    def addLast(self, node):
+    def add_last(self, node):
         currentnode = self.head
          
         while currentnode.next != None:
@@ -106,7 +106,7 @@ class LinkedList(object):
      
      
     # method to delete the first node of the linked list
-    def deleteBeg(self):
+    def delete_beg(self):
         if self.length == 0:
             print "The list is empty"
         else:
@@ -114,7 +114,7 @@ class LinkedList(object):
             self.length -= 1
      
     # method to delete the last node of the linked list
-    def deleteLast(self):
+    def delete_last(self):
          
         if self.length == 0:
             print "The list is empty"
@@ -132,7 +132,7 @@ class LinkedList(object):
              
          
     # method to delete a node after the node having the given data
-    def deleteValue(self, data):
+    def delete_value(self, data):
         currentnode = self.head
         previousnode = self.head
          
@@ -151,7 +151,7 @@ class LinkedList(object):
          
          
     # method to delete a node at a particular position
-    def deleteAtPos(self, pos):
+    def delete_at_pos(self, pos):
         count = 0
         currentnode = self.head
         previousnode = self.head
@@ -177,18 +177,18 @@ class LinkedList(object):
  
      
     # returns the length of the list        
-    def getLength(self):
+    def get_length(self):
         return self.length
      
     # returns the first element of the list
-    def getFirst(self):
+    def get_first(self):
         if self.length == 0:
             print "The list is empty"
         else:
             return self.head.data
      
     # returns the last element of the list
-    def getLast(self):
+    def get_last(self):
          
         if self.length == 0:
             print "The list is empty"
@@ -201,7 +201,7 @@ class LinkedList(object):
             return currentnode.data
      
     # returns node at any position
-    def getAtPos(self, pos):
+    def get_at_pos(self, pos):
         count = 0
         currentnode = self.head
          
@@ -232,9 +232,9 @@ node3 = Node(3)
 node4 = Node(4)
 node5 = Node(5)
 ll = LinkedList()
-ll.addNode(node1)
-ll.addNode(node2)
-ll.addNode(node3)
-ll.addNode(node4)
-ll.addNode(node5)
+ll.add_node(node1)
+ll.add_node(node2)
+ll.add_node(node3)
+ll.add_node(node4)
+ll.add_node(node5)
 ll.print_list()
